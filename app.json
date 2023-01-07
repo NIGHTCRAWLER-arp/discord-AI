@@ -1,0 +1,56 @@
+{
+  "name": "Simple Chatbot AI Discord",
+  "description": "[Chatbot] Thank you for using this script, don't forget to subscribe to my channel Galaxy1274",
+  "logo": "https://media0.giphy.com/media/oe33xf3B50fsc/200.gif",
+  "keywords": ["Chatbot-AI",
+    "discord-bot",
+    "discord",
+    "js-chatbot"],
+  "repository": "https://github.com/MGalaCyber/Discord-Chatbot-AI",
+  "website": "https://galacyber.xyz",
+  "env": {
+    "TOKEN": {
+      "description": "Get the you bot token here https://discord.com/developers/applications/",
+      "required": true
+    },
+    "OWNER": {
+      "description": "Add you Discord ID",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Add you Prefix for Chatbot",
+      "required": true
+    },
+    "MONGO_URI": {
+      "description": "Add you Mongoose Database",
+      "required": true
+    },
+    "FeedbackChannel": {
+      "description": "Add you Feedback channel for Chatbot",
+      "required": true
+    },
+    "NEW_GUILD_JOIN": {
+      "description": "Add you New Guild Joining message channel for Chatbot",
+      "required": true
+    },
+    "NEW_GUILD_LEAVE": {
+      "description": "Add you New Guild Leave message channel for Chatbot",
+      "required": true
+    },
+    "BugsChannel": {
+      "description": "Add you Bugs Report channel for Chatbot",
+      "required": true
+    }
+},
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+   "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
